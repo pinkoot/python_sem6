@@ -18,6 +18,7 @@ Django-admin startproject bmstu_project .
 9. Создать приложение
 python manage.py startapp catalog
 10. Зарегистрировать в проекте приложение (прописываем путь к классу приложения)
+```
 Пример структуры каталогов проекта:MyProject/
 ├── manage.py # утилита командной строки Django (запуск сервера, миграции,
 создание приложений)
@@ -70,6 +71,8 @@ python manage.py startapp catalog
 11) Создать приложениеpython manage.py startapp basket
 12. Зарегистрировать в проекте приложение (прописываем путь к классу приложения)
 Планирование адресов и путей
+
+```
 # urls.py
 from django.contrib import admin
 from django.urls import path
