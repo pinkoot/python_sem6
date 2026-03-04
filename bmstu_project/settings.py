@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'cinema.apps.CinemaConfig',
     #путь к классу который мы подключаем
     'catalog.apps.CatalogConfig',
     'django.contrib.admin',
