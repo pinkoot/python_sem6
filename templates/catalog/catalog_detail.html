@@ -5,6 +5,35 @@
 
 <h1> {{ title }}</h1>
 
+<p>
+  {{ html_test | safe }}
+</p>
+
+
+<p>
+  {{ long_string | length }}
+</p>
+
+
+<p>
+  {{ my_date | date:"d.m.y"}}
+  <br>
+  {{ my_date | date:"d.m.Y"}}
+  <br>
+  {{ my_date | date:"d.M.Y"}}
+  <br>
+  {{ my_date | date:"d.E.Y"}}          
+</p>
+
+<p>
+  {{ string_with_new_lines | linebreaksbr}}
+</p>
+
+
+<p>
+  {{ test_text | title | truncatewords:5 }}
+</p>
+
 
  {% if promo_product == "promo_product" %} 
   <h2>promo_prodcut</h2>
@@ -19,6 +48,11 @@
 
 {% for product in promo_products %}
   <p>{{ product }}</p>
+
+{% if forloop.last %}
+<hr>
+{% endif %}
+{% empty %}
 
 {% endfor %}
 

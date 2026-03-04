@@ -1,6 +1,8 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 
+import datetime
+
 # Create your views here.
 
 def catalog_info(request):
@@ -28,9 +30,16 @@ def catalog_detail_test(request):
         'promo_product4',
     ]
 
+    my_date = datetime.datetime(2026, 2, 28)
+
     context = {
         'title': title,
+        'long_string': 'dfghjkldfghjkldfghj', 
+        'html_test': '<h2> testtest </h2>',
         'promo_products': promo_products,
+        'string_with_new_lines': 'aaa\nbbbb\nccc',
+        'my_date': my_date,
+        'test_text': 'ЭТО ОдиН МаЛЕНький шаг для челоВЕКА, Но БОЛьШой длЯ Еловечества'
     }
 
     return render(
